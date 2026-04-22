@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Level 07 — Box-Sizing & Responsive Considerations</title>
+    <style>
+      /* TODO: Toggle box-sizing and observe width differences */
+      .box {
+        width: 200px;
+        padding: 20px;
+        border: 4px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Box-sizing comparison</h1>
+      <div class="box" id="box-a">box A</div>
+      <div class="box" id="box-b" style="box-sizing: border-box">
+        box B (border-box)
+      </div>
+      <!-- TODO: Try adding global `*, *::before, *::after { box-sizing: border-box }` -->
+    </main>
+  </body>
+</html>
