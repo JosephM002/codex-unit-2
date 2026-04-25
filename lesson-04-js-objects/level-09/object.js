@@ -5,6 +5,13 @@
 // user.greet = greet
 // export default user
 const user = {
+  name: "JM"
   /* TODO: add name */
 };
+export default user;
+
+function Hello (name){
+  return "Hello"+ name;
+}
+user.Hello = Hello;
 export default user;
