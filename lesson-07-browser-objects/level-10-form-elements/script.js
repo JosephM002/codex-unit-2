@@ -3,10 +3,13 @@
 
 function handleSubmit(event) {
   // TODO: prevent default when ready
-  // event.preventDefault();
+  event.preventDefault();
+  const form = event.target;
+  const message = form.elements.message.value;
+  return message.innerText;
   // TODO: const form = event.target; const message = form.elements.message.value; display via innerText
   console.log("form submit scaffold");
 }
 
-// const form = document.getElementById('sample-form');
-// if (form) form.onsubmit = handleSubmit;
+const form = document.getElementById("sample-form");
+if (form) form.onsubmit = handleSubmit;
