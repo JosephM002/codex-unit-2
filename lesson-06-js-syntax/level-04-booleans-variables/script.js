@@ -5,3 +5,14 @@
 // let isLoggedIn = false;
 
 let isLoggedIn = false;
+let isOld = true;
+let hasID = true;
+let canDrink = true;
+let canDrive = false;
+let isBlind = true;
+let shouldDie = false;
+let isThirsty = false;
+let isHungry = false;
+let isCoding = true;
+
+export default isLoggedIn;
