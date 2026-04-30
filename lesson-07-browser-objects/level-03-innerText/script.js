@@ -7,3 +7,7 @@
 // console.log('before:', el && el.innerText);
 // // TODO: set el.innerText = '...';
 // console.log('after:', el && el.innerText);
+const el = document.getElementById("desc");
+console.log("before" + el && el.innerText);
+el.innerText = "This is updated text.";
+console.log("after" + el && el.innerText);
