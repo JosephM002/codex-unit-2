@@ -10,3 +10,6 @@ function handleSubmit(event) {
 // Scaffold assignment (adjust id if needed):
 // const form = document.getElementById('sample-form');
 // if (form) form.onsubmit = handleSubmit;
+
+const form = document.getElementById("sample-form");
+form.onsubmit = handleSubmit;
