@@ -11,3 +11,9 @@
 //   console.log('enctype:', form.enctype);
 //   console.log('className:', form.className);
 // }
+const form = document.getElementById("sample-form");
+console.log("id:" + form.id);
+console.log("name:" + form.name);
+console.log("elements length:" + form.elements.length);
+console.log("enctype:" + form.enctype);
+console.log("className:" + form.className);
