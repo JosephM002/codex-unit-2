@@ -7,3 +7,12 @@
 // Add your lines below:
 
 let userName;
+let firstName;
+let lastName;
+let midName;
+let Age;
+let birthDate;
+let currentDate;
+let Gender;
+let Random;
+let lastOne;
