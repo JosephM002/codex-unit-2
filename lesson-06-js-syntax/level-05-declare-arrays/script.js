@@ -4,4 +4,5 @@
 // Example:
 // let userNames = ["Ava", "Jon", "Maya"];
 
-let userNames = [];
+const userNames = ["Rolazar", "Ava", "Amber", "Ashanti", "Joseph"];
+const userAges = [40, 30, 35, 28, 5000];
