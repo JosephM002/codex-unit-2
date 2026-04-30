@@ -6,5 +6,14 @@
 // let totalCount = 10;
 
 // Add your lines below:
-
+export default totalCount;
 let totalCount = 0;
+let firstName = "Joseph";
+let lastName = "M";
+let middleName = "NaN";
+let currentAge = 5000;
+let isFalse = "true";
+let userName = "JosephM";
+let randomValue = 20;
+let currentDate = 4282026;
+let lessonNumber = 6;
