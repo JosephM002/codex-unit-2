@@ -3,11 +3,16 @@
 
 function handleSubmit(event) {
   // TODO: call event.preventDefault() when experimenting
+  const form = event.target;
+  event.preventDefault();
   // event.preventDefault();
   console.log("event.target:", event.target);
   console.log("event.currentTarget:", event.currentTarget);
   // TODO: const form = event.target; use form.elements to access inputs
+  console.log(form.id);
 }
 
 // const form = document.getElementById('sample-form');
 // if (form) form.onsubmit = handleSubmit;
+const form = document.getElementById("sample-form");
+if (form) form.onsubmit = handleSubmit;
