@@ -10,3 +10,10 @@
 // list.forEach((el, i) => {
 //   // TODO: update each el.innerText
 // });
+const one = document.querySelector("#one");
+console.log("before" + one && one.innerHTML);
+one.innerHTML = <strong>single query</strong>;
+console.log("after" + one + one.innerHTML);
+const list = querySelectorAll(".item");
+list.forEach((el, i) => (el.innerText = "Item " + (i + 1)));
+console.log("Allchanged" + list + list.innerHTML);
