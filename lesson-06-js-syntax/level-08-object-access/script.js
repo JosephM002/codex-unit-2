@@ -31,4 +31,16 @@ const order = {
   },
 };
 
+let status = order.status;
+let orderId = order.id;
+let shippingMethod = order.shippingMethod;
+let isGift = order.isGift;
+let placedAt = order.placedAt;
+let firstItem = order.items.name;
+let customerName = order.customer.name;
+let price = order.totals.total;
+let customerContact = order.customer.contact;
+let orderAdress = order.customer.address;
 const id = order.id;
+
+export default order;
