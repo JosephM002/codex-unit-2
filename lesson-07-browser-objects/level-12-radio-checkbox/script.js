@@ -2,12 +2,14 @@
 // TODO: in submit handler read radio via form.elements.color.value and checkbox via form.elements.subscribe.checked
 
 function handleSubmit(event) {
-  // event.preventDefault();
-  // const form = event.target;
+  event.preventDefault();
+  const form = event.target;
+  const color = form.elements.color.value;
+  const subbed = form.elements.subscribe.checked;
   // TODO: const color = form.elements.color.value;
   // TODO: const subscribe = form.elements.subscribe.checked;
-  console.log("radio & checkbox scaffold");
+  console.log("radio & checkbox scaffold:" + color && subbed);
 }
 
-// const form = document.getElementById('sample-form');
-// if (form) form.onsubmit = handleSubmit;
+const form = document.getElementById("sample-form");
+if (form) form.onsubmit = handleSubmit;
