@@ -6,6 +6,7 @@ const result = document.getElementById("result");
 function handleSubmit(event) {
   event.preventDefault();
   // TODO: set result.innerText to a short explanation about fetch
+  result.innerText = "fetch makes a network request to resolve a response";
 }
 
 if (form) form.onsubmit = handleSubmit;
