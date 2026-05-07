@@ -1,8 +1,22 @@
-const questionEl6 = document.getElementById("question");
-const choicesEl6 = document.getElementById("choices");
-const feedbackEl6 = document.getElementById("feedback");
+const triviaForm = document.getElementById("trivia-form");
+const questionEl = document.getElementById("question");
+triviaForm.onsubmit = trivia;
 
-// TODO: fetch a question, extract correct & incorrect answers, shuffle them
-// TODO: render choices as accessible buttons and wire click handlers
-// TODO: show feedback on selection and provide retry/next controls
-console.log("level-06 scaffold");
+async function trivia(event) {
+  event.preventDefault();
+  const data = {
+    category: triviaForm.elements.category.value,
+    difficulty: triviaForm.elements.difficulty.value,
+  };
+  // TODO: preventDefault, build query params with URLSearchParams
+  // TODO: fetch trivia API with async/await then parse JSON
+  // TODO: render result[0].question.text into the page
+  const param = new URLSearchParams(data);
+  const waiting = await fetch(
+    "https://the-trivia-api.com/v2/questions" + "?" + param,
+  );
+  const received = await waiting.json();
+  console.log(received);
+  questionEl.innerText = received[0].question.text;
+  console.log("level-06 placeholder");
+}
