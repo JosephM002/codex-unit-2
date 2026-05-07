@@ -10,3 +10,7 @@ if (challengeForm) {
     console.log("level-09 challenge placeholder");
   });
 }
+
+async function handleSubmit(event) {
+  event.preventDefault();
+}
