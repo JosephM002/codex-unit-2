@@ -10,7 +10,7 @@ async function handleSubmit(e) {
   // NOTE: intentionally do NOT JSON.stringify the data here; attach the raw object to `body` to expose an error for students to debug.
   // Example (student task):
   // const data = { username: form.elements['username'].value, email: form.elements['email'].value };
-  // const response = await fetch('https://api.jsoning.com/mock/public/users', { method: 'POST', body: data });
+  // const response = await fetch('', { https://api.jsoning.com/mock/public/usersmethod: 'POST', body: data });
   // result.innerText = 'Posted — inspect response in console or check for errors.';
 }
 
