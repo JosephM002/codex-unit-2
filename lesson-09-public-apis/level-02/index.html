@@ -4,18 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Level 02 — Feedback Message</title>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <h1>Feedback Message (Level 02)</h1>
     <form id="login-form">
-      <label>Email: <input name="email" type="email" /></label>
-      <label>Password: <input name="password" type="password" /></label>
+      <label
+        >Email: <input id="username" name="username" type="username"
+      /></label>
+      <label
+        >Password: <input id="username" name="password" type="password"
+      /></label>
       <button type="submit">Submit</button>
     </form>
 
     <div id="error" role="alert" aria-live="polite"></div>
     <div id="success" role="status" aria-live="polite"></div>
-
-    <script src="script.js" defer></script>
   </body>
 </html>
