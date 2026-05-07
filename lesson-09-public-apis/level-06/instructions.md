@@ -1,32 +1,79 @@
 ## Level 06 — Trivia Feedback
 
-Objective
-Render a multiple-choice trivia question and present selectable choices.
+## Objective
 
-Benefits
+Render a trivia question and present selectable choices.
 
-- Practices DOM rendering, event handling, and basic state management.
+## Benefits
 
-Complete these tasks
+- Builds UI skills: taking API data and turning it into interactive choices.
+- Reinforces array/object navigation for nested API responses.
 
-- Fetch a question and extract correct and incorrect answers.
-- Shuffle choices, render them as accessible buttons, and wire click handlers.
-- Provide feedback on selection and allow retrying or next question.
+## Complete these tasks
 
-Hints
+- Fetch trivia questions from the endpoint using `async/await`.
+- Save the first question text to `question` (`result[0].question.text`).
+- Place correct and incorrect answers into separate variables.
+- Display question and choices in the DOM.
 
-- Use an array shuffle helper and `button` elements for keyboard accessibility.
+## Hints
 
-More information
+- The first incorrect answer is `result[0].incorrectAnswers[0]`.
+- Combine `correctAnswer` and `incorrectAnswers` for the choice set.
 
-- Keep the feedback clear: show correct/incorrect and an option to continue.
+## More information
 
-Usage tips
+- To navigating nested arrays & objects, use dot and bracket notation to access nested properties, for example `result[0].question.text`.
+- To display choices as separate elements, create an element for each choice, then render each choice into its own element with `innerText` or `innerHTML`. For example:
 
-- Disable buttons after selection to avoid multiple submissions.
-
-Example
-
+```js
+const choiceA = result[0].correctAnswer;
+const choiceTagA = document.getElementById("choiceA");
+choiceTagA.innerHTML = choiceA;
 ```
-choices.forEach(text => { const b=document.createElement('button'); b.textContent=text; });
+
+## Usage tips
+
+- Render choices as buttons or radio inputs for easier accessibility.
+- Sample response:
+
+```js
+[
+  {
+    category: "science",
+    id: "622a1c3f7cc59eab6f9523ac",
+    correctAnswer: "Amnesia",
+    incorrectAnswers: ["Insomnia", "Coma", "Kleptomania"],
+    question: {
+      text: "A loss of memory is known as what?",
+    },
+    tags: ["medicine", "words", "science"],
+    type: "text_choice",
+    difficulty: "easy",
+    regions: [],
+    isNiche: false,
+  },
+  {
+    category: "science",
+    id: "6243357dcfaae40c129614ad",
+    correctAnswer: "A Hatchling",
+    incorrectAnswers: ["A Piglet", "A Maggot", "A Lamb"],
+    question: {
+      text: "What is the word for a young turtle?",
+    },
+    tags: ["science"],
+    type: "text_choice",
+    difficulty: "easy",
+    regions: [],
+    isNiche: false,
+  },
+];
+```
+
+## Example
+
+```js
+const question = result[0].question.text;
+const correct = result[0].correctAnswer;
+const incorrect1 = result[0].incorrectAnswers[0];
 ```

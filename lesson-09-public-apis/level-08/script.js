@@ -1,7 +1,7 @@
-const btn8 = document.getElementById("get-joke");
-const jokeEl = document.getElementById("joke");
-const errorEl8 = document.getElementById("error");
+const formTag = document.getElementById("jokeForm");
+formTag.onsubmit = handleSubmit;
 
+<<<<<<< HEAD
 async function handleSubmit(event) {
   event.preventDefault();
   const data = {
@@ -18,4 +18,11 @@ async function handleSubmit(event) {
   const outputTag = getElementById("description");
   outputTag.innerText = description;
   imgTag.src = src;
+=======
+function handleSubmit(event) {
+  event.preventDefault();
+  // TODO: Create a `data` object with an "api-key" property (quoted when hyphenated)
+  // TODO: Convert `data` into a query string and fetch jokes (or send as header if API requires)
+  // TODO: Parse response and render a joke into the DOM. On invalid key, show an error message in the page
+>>>>>>> 96fdf23107e786b5dfef610f5da0cc538fa14d42
 }

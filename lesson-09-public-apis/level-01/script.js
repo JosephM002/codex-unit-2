@@ -1,26 +1,11 @@
-const form = document.getElementById("login-form");
-const errorEl = document.getElementById("error");
-const success = document.getElementById("success");
-form.onsubmit = handleSubmit;
+const formTag = document.getElementById("loginForm");
+formTag.onsubmit = handleSubmit;
 
-async function handleSubmit(event) {
-  event.preventDefault();
-  try {
-    const data = {
-      username: form.elements.username.value,
-      password: form.elements.password.value,
-    };
-    const dataString = await JSON.stringify(data);
-    const waiting = await fetch("https://dummyjson.com/users", {
-      method: "POST",
-      body: dataString,
-      headers: {
-        "Content-Type": application / json,
-      },
-    });
-    const receive = await waiting.json();
-    success.innerText = "HELP";
-  } catch {
-    console.log("help");
-  }
+function handleSubmit(event) {
+  // TODO: Call event.preventDefault()
+  // TODO: Create `data` object with username and password from form.elements
+  // TODO: const dataString = JSON.stringify(data)
+  // TODO: Use async/await with fetch to POST to https://dummyjson.com/auth/login
+  // TODO: Include headers: { 'Content-Type': 'application/json' }
+  // TODO: Parse response into `result` and console.log(result)
 }
