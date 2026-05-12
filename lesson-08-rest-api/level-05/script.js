@@ -8,14 +8,14 @@ const pId = document.getElementById("id");
 async function handleSubmit(e) {
   e.preventDefault();
   // TODO: implement fetch and set the three elements' innerText
-  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const response = await fetch("https://api.jsoning.com/mock/public/users");
   const userdata = await response.json();
-  const found = userdata.userId;
-  const headers = userdata.title;
-  const encode = userdata.completed;
-  pUrl.innerText = found;
-  pHost.innerText = headers;
-  pEnc.innerText = encode;
+  const found = response.url;
+  const headers = response.headers.get("host");
+  const encode = response.headers.get("accept-encoding");
+  pUsername.innerText = found;
+  pEmail.innerText = headers;
+  pId.innerText = encode;
 }
 
 if (form) form.onsubmit = handleSubmit;
