@@ -3,3 +3,6 @@
 // Students should replace the URL below with their chosen API endpoint.
 // TODO: fetch('https://api.example.com/endpoint')
 console.log("TODO: log one documentation fact here");
+fetch ("https://api.thecatapi.com/v1/images/search",{
+    method:"GET"
+});
