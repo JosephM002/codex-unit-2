@@ -8,9 +8,11 @@ function handleSubmit(e) {
   // TODO: build a `data` object from form.elements using indexes (e.g. form.elements[0].value)
   // Example display: out.innerText = JSON.stringify(data, null, 2);
   const form = event.target;
-  const name = form.elements[0].value;
-  const email = form.elements[1].value;
-  const note = form.elements[2].value;
+  const data = {
+    name: form.elements[0].value,
+    email: form.elements[1].value,
+    note: form.elements[2].value,
+  };
   data.innerText = name + email + note;
 }
 
